@@ -1,0 +1,1 @@
+int numFormat(char *in, char *out, int out_size);

@@ -1,0 +1,1 @@
+int login(const char *acc, const char *pw);

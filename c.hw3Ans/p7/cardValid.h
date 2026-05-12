@@ -1,0 +1,1 @@
+int cardValid(const char *number, int *valid);

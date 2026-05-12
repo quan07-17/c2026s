@@ -1,0 +1,1 @@
+int search(const char *str, const char *substr);
