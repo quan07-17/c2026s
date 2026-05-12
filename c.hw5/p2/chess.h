@@ -1,0 +1,1 @@
+void isLiveThree(char (*p)[19]);
