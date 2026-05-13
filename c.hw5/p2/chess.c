@@ -84,28 +84,28 @@ void isLiveThree(char chessboard[19][19])
             if (j <= 14) {
                 liveThree = checkHorizontal((char (*)[5])&chessboard[i][j]);
                 if (liveThree) {
-                    printf("LiveThree found: (%c, %2d)(%c, %2d)(%c, %2d)\n", j + 'A' + 1, i + 1, j + 2 + 'A', i + 1, j + 3 + 'A', i + 1);
+                    printf("LiveThree found: (%c, %2d) (%c, %2d) (%c, %2d)\n", j + 'A' + 1, i + 1, j + 2 + 'A', i + 1, j + 3 + 'A', i + 1);
                     noliveThree = false;
                 }
             }
             if (i <= 14) {
                 liveThree = checkVertical((char (*)[19])&chessboard[i - 1][j + 1]);
                 if (liveThree) {
-                    printf("LiveThree found: (%c, %2d)(%c, %2d)(%c, %2d)\n", j + 'A' + 1, i + 1, j + 'A' + 1, i + 2, j + 'A' + 1, i + 3);
+                    printf("LiveThree found: (%c, %2d) (%c, %2d) (%c, %2d)\n", j + 'A' + 1, i + 1, j + 'A' + 1, i + 2, j + 'A' + 1, i + 3);
                     noliveThree = false;
                 }
             }
             if ((i <= 14) && (j <= 14)) {
                 liveThree = checkDiagonal((char (*)[19])&chessboard[i][j]);
                 if (liveThree) {
-                    printf("LiveThree found: (%c, %2d)(%c, %2d)(%c, %2d)\n", j + 'A' + 1, i + 1, j + 2 + 'A', i + 2, j + 3 + 'A', i + 3);
+                    printf("LiveThree found: (%c, %2d) (%c, %2d) (%c, %2d)\n", j + 'A' + 1, i + 1, j + 2 + 'A', i + 2, j + 3 + 'A', i + 3);
                     noliveThree = false;
                 }
             }
             if ((i <= 14) && (j >= 4)) {
                 liveThree = checkBackDiagonal((char (*)[18])&chessboard[i][j]);
                 if (liveThree) {
-                    printf("LiveThree found: (%c, %2d)(%c, %2d)(%c, %2d)\n", j + 'A', i + 1, j + 'A' - 1, i + 2, j + 'A' - 2, i + 3);
+                    printf("LiveThree found: (%c, %2d) (%c, %2d) (%c, %2d)\n", j + 'A', i + 1, j + 'A' - 1, i + 2, j + 'A' - 2, i + 3);
                     noliveThree = false;
                 }
             }
