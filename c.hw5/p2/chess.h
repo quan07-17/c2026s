@@ -8,4 +8,5 @@ typedef enum {Black=49, White=48, None=0} Player;
 bool checkHorizontal(char (*p)[5]);
 bool checkVertical(char (*p)[19]);
 bool checkDiagonal(char (*p)[19]);
+bool checkBackDiagonal(char (*p)[18]);
 void isLiveThree(char chessboard[19][19]);
