@@ -36,6 +36,25 @@ bool checkVertical(char (*p)[19])
     return false;
 }
 
+bool checkDiagonal(char (*p)[19])
+{
+    int i, b = 0, w = 0;
+    for (i = 1; i < 4; i++)
+    {
+        if ((*p)[i] == '1') {
+            b++;
+        }
+        else if ((*p)[i] == '0'){
+            w++;
+        }
+        p++;
+    }
+    if ((b == 3 || w == 3) && ((*p)[0] == '.' && (*p)[4] == '.')) {
+        return true;
+    }
+    return false;
+}
+
 void isLiveThree(char chessboard[19][19])
 {
     int i, j;
@@ -54,6 +73,13 @@ void isLiveThree(char chessboard[19][19])
                 liveThree = checkVertical((char (*)[19])&chessboard[i][j]);
                 if (liveThree) {
                     printf("LiveThree found: (%c, %2d)(%c, %2d)(%c, %2d)\n", j + 'A', i + 2, j + 'A', i + 3, j + 'A', i + 4);
+                    noliveThree = false;
+                }
+            }
+            if ((i <= 14) && (j <= 14)) {
+                liveThree = checkDiagonal((char (*)[19])&chessboard[i][j]);
+                if (liveThree) {
+                    printf("LiveThree found: (%c, %2d)(%c, %2d)(%c, %2d)\n", j + 'A' + 1, i + 1, j + 2 + 'A', i + 2, j + 3 + 'A', i + 3);
                     noliveThree = false;
                 }
             }
