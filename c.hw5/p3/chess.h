@@ -9,4 +9,4 @@ bool checkHorizontal(char (*p)[6]);
 bool checkVertical(char (*p)[19]);
 bool checkDiagonal(char (*p)[19]);
 bool checkBackDiagonal(char (*p)[18]);
-void isLiveThree(char chessboard[19][19]);
+void isDeadFour(char chessboard[19][19]);

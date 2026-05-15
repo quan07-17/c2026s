@@ -72,7 +72,7 @@ bool checkBackDiagonal(char (*p)[18])
     return false;
 }
 
-void isLiveThree(char chessboard[19][19])
+void isDeadFour(char chessboard[19][19])
 {
     int i, j;
     bool DeadFour = false;
